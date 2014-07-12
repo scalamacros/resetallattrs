@@ -14,12 +14,10 @@ package resetallattrs {
   object Macros {
     def impl(c: WhiteboxContext)(tree: c.Tree): c.Tree = {
       import c.universe._
-      val q"$_.ResetAllAttrs($context).resetAllAttrs[..$_](...$_)" = c.macroApplication
-      q"new _root_.org.scalamacros.resetallattrs.Helper[$context.type]($context).impl($tree)"
+      val q"$_.ResetAllAttrs($context).resetAllAttrs[${t: Type}](...$_)" = c.macroApplication
+      val internalHelper = tq"_root_.scala.reflect.internal.resetallattrs.Helper"
+      val internalUniverse = tq"scala.reflect.internal.SymbolTable"
+      q"new $internalHelper($context.universe.asInstanceOf[$internalUniverse]).impl($tree).asInstanceOf[$t]"
     }
-  }
-
-  class Helper[C <: BlackboxContext](val c: C) {
-    def impl(tree: c.Tree): c.Tree = ???
   }
 }
