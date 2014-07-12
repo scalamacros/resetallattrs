@@ -14,7 +14,7 @@ to `untypecheck`, branding `resetLocalAttrs` as the one and only public way of f
 When doing that, we expected that `resetLocalAttrs` should be enough for virtually everyone who previously used `resetAllAttrs`.
 
 Unfortunately, that ended up being not the case and due to binary compatibility constraints we can't just reintroduce `resetAllAttrs` in 2.11.x
-(or even in 2.12.x, for that matter). So here we go, reinstating `resetAllAttrs` in a separate library for the cases when it's really necessary.
+(or even in 2.12.x, for that matter). So here we go, reinstating `resetAllAttrs` in a separate library for the cases when it's really necessary. Let's hope the necessity for `resetAllAttrs` won't last for long.
 
 ### Usage
 
