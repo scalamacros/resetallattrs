@@ -7,7 +7,7 @@ at our past level of technology we needed them (and we still do) to deal with po
 Without going into details, experience has shown that `resetLocalAttrs` can deal with a majority of possible inconsistencies
 having a mild chance of corrupting trees as a side-effect of its operation, whereas `resetAllAttrs` can deal with some additional inconsistencies,
 but it's almost always guaranteed to corrupt trees. Go through our [Macrology 201](https://github.com/scalamacros/macrology201)
-tutotial to learn more about this topic.
+tutorial to learn more about this topic.
 
 Anyway, based on what we've learned about resetAttrs methods, in Scala 2.11.0 we removed `resetAllAttrs` and renamed `resetLocalAttrs`
 to `untypecheck`, branding `resetLocalAttrs` as the one and only public way of fixing inconsistencies in trees.
