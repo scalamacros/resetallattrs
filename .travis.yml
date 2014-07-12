@@ -12,7 +12,7 @@ notifications:
     - eugene.burmako@epfl.ch
 env:
   global:
-   - SCALAMETA_MAVEN_REALM="Sonatype Nexus Repository Manager"
-   - SCALAMETA_MAVEN_DOMAIN="oss.sonatype.org"
-   - secure: "eDY2YtElfn3VipoZlxDRl3PMRlLNvPuloRJgFDU/AGb8rEdgTJVCgTdwzHlsju4t0XGshBQIN6CAugqnQ0XTcMh2WkgFKwIFEsEXVjMIWk95QeaoWwPevfYZ1LLy6NZF3GvHj+lHZDmY4VuNEPDj2LlTiokHlfBuIM7NsPnScy4="
-   - secure: "J5Lodekb2cbpEAbFpdMjQp8sx4j1PUZpAavOejYOuN6/bqG0GFAONr5YRl422FpYZSJdpKNRdiLV1EI+mflqr56nsdpm1sr0/q9mHbALkmLUIbrK0bObP/TTQdq47EjwnWQgIixhCM9F9RFhsdo7cV2CHL9j8k5v4pgjJzfjkDY="
+   - SCALAMACROS_MAVEN_REALM="Sonatype Nexus Repository Manager"
+   - SCALAMACROS_MAVEN_DOMAIN="oss.sonatype.org"
+   - secure: "HAUyJIcG3b7hlazDVsMY7rLWwSzpZ11wWA9qpMtQb5Thumu2h5BnDM081dXFSakuwYXbdUAKk5OMiUa4SeWHDMmR6IsuN8MS5HTC0OefIuJW+C+tuf/uL5SzknRpL4VdGJb9FActMHkGrn5HICL/Br0f0yOfHH3J4jFYDYNSFHs="
+   - secure: "aN7Rdyypnht5fPwpMXnDxCGSYi6reGtIq3g51+m9FbJRaAGg8w1zCuUia/u5ASDKWMGvVjQ/wl6OEMVMd73H2E5BPRIOhRS2I6ZPYwEIUADE+uT9MKrOUxdgI1BlxWiPZRnrlvll9+y3xFl7Q+buDUWvrIBqSDBJ30gE/DL5n24="
