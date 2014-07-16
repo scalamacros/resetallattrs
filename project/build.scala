@@ -135,6 +135,7 @@ object build extends Build {
     libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.3" % "test",
     libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.11.3" % "test",
     libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _ % "provided"),
-    scalacOptions ++= Seq()
+    scalacOptions ++= Seq(),
+    packagedArtifacts := Map.empty
   ) dependsOn (resetallattrs)
 }
