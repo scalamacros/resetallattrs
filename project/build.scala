@@ -52,6 +52,13 @@ object build extends Build {
         <system>GitHub</system>
         <url>https://github.com/scalamacros/resetallattrs/issues</url>
       </issueManagement>
+      <developers>
+        <developer>
+          <id>xeno-by</id>
+          <name>Eugene Burmako</name>
+          <url>http://xeno.by</url>
+        </developer>
+      </developers>
     )
   )
 
