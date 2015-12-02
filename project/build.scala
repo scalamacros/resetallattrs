@@ -4,7 +4,7 @@ import Keys._
 object build extends Build {
   lazy val sharedSettings = Defaults.defaultSettings ++ Seq(
     scalaVersion := "2.11.1",
-    crossScalaVersions := Seq("2.11.1", "2.12.0-M2"),
+    crossScalaVersions := Seq("2.11.1", "2.12.0-M3"),
     crossVersion := CrossVersion.binary,
     version := "1.0.0-SNAPSHOT",
     organization := "org.scalamacros",
@@ -141,10 +141,10 @@ object build extends Build {
     sharedSettings: _*
   ) settings (
     libraryDependencies <+= scalaVersion {
-      case v if v startsWith "2.12" => "org.scalatest" %% "scalatest" % "2.2.5-M2" % "test"
+      case v if v startsWith "2.12" => "org.scalatest" %% "scalatest" % "2.2.5-M3" % "test"
       case _ => "org.scalatest" %% "scalatest" % "2.2.4" % "test"
     },
-    libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.12.4" % "test",
+    libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.12.5" % "test",
     libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _ % "provided"),
     scalacOptions ++= Seq(),
     packagedArtifacts := Map.empty
