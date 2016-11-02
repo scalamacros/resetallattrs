@@ -8,7 +8,7 @@ object build extends Build {
     crossVersion := CrossVersion.binary,
     version := "1.0.0-SNAPSHOT",
     organization := "org.scalamacros",
-    description := "The missing compatibility library for reflection in Scala 2.11 when c.untypecheck is not enough",
+    description := "The missing compatibility library for reflection in Scala 2.11/2.12 when c.untypecheck is not enough",
     resolvers += Resolver.sonatypeRepo("snapshots"),
     resolvers += Resolver.sonatypeRepo("releases"),
     publishMavenStyle := true,
