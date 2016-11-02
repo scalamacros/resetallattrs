@@ -21,7 +21,7 @@ Unfortunately, that ended up being not the case and due to binary compatibility 
 In your SBT build you need to write a one-liner:
 
 ```
-libraryDependencies += "org.scalamacros" %% "resetallattrs" % "1.0.0-SNAPSHOT"
+libraryDependencies += "org.scalamacros" %% "resetallattrs" % "1.0.0"
 ```
 
 Then in your macros you write another one-liner, and that enables you to use `resetAllAttrs` like in the good old days.
