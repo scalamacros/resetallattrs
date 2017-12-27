@@ -4,11 +4,11 @@ import Keys._
 object build extends Build {
   lazy val sharedSettings = Defaults.defaultSettings ++ Seq(
     scalaVersion := "2.11.8",
-    crossScalaVersions := Seq("2.11.8", "2.12.0"),
+    crossScalaVersions := Seq("2.11.8", "2.12.0", "2.13.0-M2"),
     crossVersion := CrossVersion.binary,
     version := "1.0.0-SNAPSHOT",
     organization := "org.scalamacros",
-    description := "The missing compatibility library for reflection in Scala 2.11/2.12 when c.untypecheck is not enough",
+    description := "The missing compatibility library for reflection in Scala 2.11/2.12/2.13 when c.untypecheck is not enough",
     resolvers += Resolver.sonatypeRepo("snapshots"),
     resolvers += Resolver.sonatypeRepo("releases"),
     publishMavenStyle := true,
@@ -140,8 +140,8 @@ object build extends Build {
   ) settings (
     sharedSettings: _*
   ) settings (
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test",
-    libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
+    libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.5" % "test",
     libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _ % "provided"),
     scalacOptions ++= Seq(),
     packagedArtifacts := Map.empty
