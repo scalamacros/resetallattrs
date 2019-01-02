@@ -24,14 +24,14 @@ class Helper(val universe: scala.reflect.internal.SymbolTable) {
    */
   private class ResetAttrs(brutally: Boolean, leaveAlone: Tree => Boolean) {
     val locals = scala.collection.mutable.HashSet[Symbol]()
-    def registerLocal(sym: Symbol) {
+    def registerLocal(sym: Symbol): Unit = {
       if (sym != null && sym != NoSymbol) {
         locals += sym
       }
     }
 
     class MarkLocals extends universe.Traverser {
-      def markLocal(tree: Tree) {
+      def markLocal(tree: Tree): Unit = {
         if (tree.symbol != null && tree.symbol != NoSymbol) {
           val sym = tree.symbol
           registerLocal(sym)
