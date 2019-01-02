@@ -3,7 +3,7 @@ import Keys._
 
 lazy val sharedSettings = Seq(
   scalaVersion := "2.11.8",
-  crossScalaVersions := Seq("2.11.8", "2.12.0", "2.13.0-M3"),
+  crossScalaVersions := Seq("2.11.8", "2.12.7", "2.13.0-M5"),
   crossVersion := CrossVersion.binary,
   version := "1.0.0-SNAPSHOT",
   organization := "org.scalamacros",
@@ -16,8 +16,7 @@ lazy val sharedSettings = Seq(
   scalacOptions ++= Seq("-deprecation", "-feature") ++ { scalaVersion.value match {
     case v if (v startsWith "2.12") || (v startsWith "2.13") =>
       // Workaround for https://github.com/scala/bug/issues/10717, should be fixed in 2.12.7, 2.13.0-M4 --TG
-      // Seq("-opt:l:inline", "-opt-inline-from:**")
-      Seq.empty[String]
+      Seq("-opt:l:inline", "-opt-inline-from:**")
 
     case _ => Seq("-optimise")
   } },
@@ -146,8 +145,8 @@ lazy val tests = Project(
 ) settings (
   sharedSettings: _*
 ) settings (
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5-M1" % "test",
-  libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.5" % "test",
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP5" % "test",
+  libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % "test",
   libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value % "provided",
   scalacOptions ++= Seq(),
   packagedArtifacts := Map.empty
