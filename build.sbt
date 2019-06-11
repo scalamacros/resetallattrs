@@ -3,7 +3,7 @@ import Keys._
 
 lazy val sharedSettings = Seq(
   scalaVersion := "2.11.8",
-  crossScalaVersions := Seq("2.11.8", "2.12.7", "2.13.0-M5"),
+  crossScalaVersions := Seq("2.11.8", "2.12.7", "2.13.0"),
   crossVersion := CrossVersion.binary,
   version := "1.0.0-SNAPSHOT",
   organization := "org.scalamacros",
@@ -145,7 +145,7 @@ lazy val tests = Project(
 ) settings (
   sharedSettings: _*
 ) settings (
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP5" % "test",
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % "test",
   libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % "test",
   libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value % "provided",
   scalacOptions ++= Seq(),
